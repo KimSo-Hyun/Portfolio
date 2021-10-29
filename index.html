@@ -25,6 +25,11 @@
 
   <!-- Template Main CSS File -->
   <link href="css/style.css" rel="stylesheet">
+  
+  <!--modal-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
   <!-- =======================================================
   * Template Name: Knight - v4.6.0
@@ -47,7 +52,7 @@
       <h2 data-aos="fade-up" style="color: white">
       개인프로젝트
       </h2>
-      <a data-aos="fade-up" data-aos-delay="200" href="#about" class="btn-get-started scrollto">Get Started</a>
+      <a data-aos="fade-up" data-aos-delay="200" href="#about" class="btn-get-started scrollto">코드</a>
     </div>
   </section><!-- End Hero -->
   
@@ -91,7 +96,18 @@
     font-size: 26px;
     margin-bottom: 5%;
 }
+      .check{
+          color: #7cc576;
+      }
 
+      .modal{
+          max-width:50%;
+          
+      }
+      
+      .code{
+          font-weight: bold
+      }
     </style>
 
 
@@ -174,9 +190,17 @@
  
               </p>
               <ul>
-                <li><i class="bx bx-check-double"></i> HomeController를 이용해 가장 먼저 구동되게 하였습니다.</li>
-                <li><i class="bx bx-check-double"></i> include를 활용해 header와 footer 부분 연결하였습니다.</li>
-                <li><i class="bx bx-check-double"></i> 한복id가 신규인 상품을 쿼리문을 활용해 8개까지 상품 보여지도록 하였습니다.</li>
+                <li><span class="check">》</span>&nbsp;HomeController를 이용해 가장 먼저 구동되게 하였습니다.</li>
+                <li><span class="check">》</span>&nbsp;include를 활용해 header와 footer 부분 연결하였습니다.</li>
+                <li><span class="check">》</span>&nbsp;한복id가 신규인 상품을 쿼리문을 활용해 8개까지 상품 보여지도록 하였습니다.</li>
+                <li>
+                    <div id="ex1" class="modal">
+                      <img src="img/code/1.png" alt="" style="width: 100%">
+                      <a href="#" rel="modal:close">닫기</a>
+                    </div>
+                    <p class="code"><a href="#ex1" rel="modal:open">+ view code</a></p>
+                </li>
+
               </ul>
 
                
@@ -213,11 +237,11 @@
               <h4>상품등록</h4>
               <p>상품의 기본정보 및 이미지 upload 가능하게 구현하였습니다.</p>
             </div>
- <!--           <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-shield"></i>
-              <h4>상품 수정/삭제</h4>
-              <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-            </div>-->
+            <div id="ex2" class="modal">
+               <img src="img/code/upload.png" alt="" style="width: 100%">
+               <a href="#" rel="modal:close">닫기</a>
+            </div>
+            <p class="code"><a href="#ex2" rel="modal:open">+ view code</a></p>
           </div>
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
               <img src="img/hba.gif" class="img-fluid" alt="">
@@ -241,14 +265,20 @@
  
               </p>
               <ul>
-                <li><i class="bx bx-check-double"></i> 상품클릭시 해당 상품 number의 상세페이지로 이동하게 하였습니다.</li>
-                <li><i class="bx bx-check-double"></i> 대여일 입력시 날짜형식에 맞춰 소수점 찍히도록 구현하였습니다.</li>
-                <li><i class="bx bx-check-double"></i> 남자/여자 사이즈 필드로 구분하여 JQuery 사용해 해당 성별 사이즈 펼쳐지게 구현하였습니다.</li>
-                <li><i class="bx bx-check-double"></i> 수량변경시 총 금액부분 script 사용하여 계산해 반영되게 하였습니다</li>
+                <li><span class="check">》</span>&nbsp;상품클릭시 해당 상품 number의 상세페이지로 이동하게 하였습니다.</li>
+                <li><span class="check">》</span>&nbsp;대여일 입력시 날짜형식에 맞춰 소수점 찍히도록 구현하였습니다.</li>
+                <li><span class="check">》</span>&nbsp;남자/여자 사이즈 필드로 구분하여 JQuery 사용해 해당 성별 사이즈 펼쳐지게 구현하였습니다.</li>
+                <li><span class="check">》</span>&nbsp;수량변경시 총 금액부분 script 사용하여 계산해 반영되게 하였습니다</li>
+                <li>
+                    <div id="ex3" class="modal">
+                       <img src="img/code/date.png" alt="" style="width: 100%">
+                       <img src="img/code/amount.png" alt="" style="width: 100%">
+                       <img src="img/code/gender.png" alt="" style="width: 100%">
+                       <a href="#" rel="modal:close">닫기</a>
+                    </div>
+                    <p class="code"><a href="#ex3" rel="modal:open">+ view code</a></p>
+                </li>
               </ul>
-<!--              <p>
-                <img src="assets/img/code/carbon.png" style="width:100%">
-              </p>-->
             </div>
           </div>
         </div>
@@ -282,6 +312,15 @@
               <h4>금액계산</h4>
               <p>수량변경시 상품금액 변경 및 총 금액 변경 바로 적용되게 구현하였습니다.</p>
             </div>
+           <div id="ex4" class="modal">
+              <img src="img/code/basket.png" alt="" style="width: 100%">
+              <img src="img/code/map0.png" alt="" style="width: 100%">
+              <img src="img/code/del.png" alt="" style="width: 100%">
+              <img src="img/code/del_cont.png" alt="" style="width: 100%">
+              <img src="img/code/b_amount.png" alt="" style="width: 100%">
+              <a href="#" rel="modal:close">닫기</a>
+          </div>
+             <p class="code"><a href="#ex4" rel="modal:open">+ view code</a></p>
           </div>
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">             
               <img src="img/basket.gif" class="img-fluid" alt="">
@@ -305,14 +344,20 @@
  
               </p>
               <ul>
-               <li><i class="bx bx-check-double"></i> 카카오 우편번호 API 사용하였습니다.</li>
-                <li><i class="bx bx-check-double"></i>적립금 사용시 할인가 계산 및 차감되게 구현하였습니다.</li>
-                <li><i class="bx bx-check-double"></i> kakopay 결제API 연동하였습니다.</li>
-                <li><i class="bx bx-check-double"></i> 총 금액 부분 계산되어 결제하게 구현하였습니다.</li>
+               <li><span class="check">》</span>&nbsp;카카오 우편번호 API 사용하였습니다.</li>
+                <li><span class="check">》</span>&nbsp;적립금 사용시 할인가 계산 및 차감되게 구현하였습니다.</li>
+                <li><span class="check">》</span>&nbsp;kakopay 결제API 연동하였습니다.</li>
+                <li><span class="check">》</span>&nbsp;총 금액 부분 계산되어 결제하게 구현하였습니다.</li>
+                <li>
+                    <div id="ex5" class="modal">
+                      <img src="img/code/api.png" alt="" style="width: 100%">
+                      <img src="img/code/orderProc.png" alt="" style="width: 100%">
+                      <a href="#" rel="modal:close">닫기</a>
+                    </div>
+                     <p class="code"><a href="#ex5" rel="modal:open">+ view code</a></p>
+                </li>
               </ul>
-<!--              <p>
-                <img src="assets/img/code/carbon.png" style="width:100%">
-              </p>-->
+
             </div>
           </div>
         </div>
@@ -375,10 +420,10 @@
  
               </p>
               <ul>
-               <li><i class="bx bx-check-double"></i> 사용자가 취소요청 버튼을 누르면 해당상품의 취소요청페이지로 이동합니다.</li>
-                <li><i class="bx bx-check-double"></i>취소사유를 선택하지 않으면 alert창이 뜨게 하였습니다.</li>
-                <li><i class="bx bx-check-double"></i>요청하면 기존list에 해당삼품 상태가 취소요청으로 변경되어 보여집니다.</li>
-                <li><i class="bx bx-check-double"></i>관리자 취소관리 페이지에 접속하면 요청상품 리스트에 생성되어 상태 수정할 수 있게 구현하였습니다.</li>
+               <li><span class="check">》</span>&nbsp;사용자가 취소요청 버튼을 누르면 해당상품의 취소요청페이지로 이동합니다.</li>
+                <li><span class="check">》</span>&nbsp;취소사유를 선택하지 않으면 alert창이 뜨게 하였습니다.</li>
+                <li><span class="check">》</span>&nbsp;요청하면 기존list에 해당삼품 상태가 취소요청으로 변경되어 보여집니다.</li>
+                <li><span class="check">》</span>&nbsp;관리자 취소관리 페이지에 접속하면 요청상품 리스트에 생성되어 상태 수정할 수 있게 구현하였습니다.</li>
               </ul>
 <!--              <p>
                 <img src="assets/img/code/carbon.png" style="width:100%">
